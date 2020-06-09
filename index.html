@@ -20,6 +20,7 @@
       xhr.open('GET', 'https://edge.qiwi.com/person-profile/v1/profile/current?authInfoEnabled=false', false);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.setRequestHeader('Accept', 'application/json');
+      xhr.setRequestHeader('Access-Control-Allow-Origin','*');
       xhr.setRequestHeader('Authorization', 'Bearer '+token);
       xhr.send();
       if (xhr.status != 200) {
