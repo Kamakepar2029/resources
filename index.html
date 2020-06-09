@@ -5,5 +5,32 @@
 </head>
 <body>
 <h1>Resources</h1>
+<input type="text" placeholder="Enter your Token" id="tokens">
+  <button>Go to qiwi api</button>
+  <div id="all">
+    
+  </div>
+  <script>
+    function getel(){
+    var apitoken = document.getElementById('tokens').value;
+    send(apitoken);
+    }
+    function send(token){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://edge.qiwi.com/person-profile/v1/profile/current?authInfoEnabled=false', false);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.setRequestHeader('Authorization', 'Bearer '+token);
+      xhr.send();
+      if (xhr.status != 200) {
+       // обработать ошибку
+      alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+    } else {
+      // вывести результат
+      document.getElementById('all').innerHTML = xhr.responseText;// responseText -- текст ответа.
+    }
+   }
+    
+  </script>
 </body>
 </html>
