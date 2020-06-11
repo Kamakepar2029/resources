@@ -1,1 +1,0 @@
-[{"name":"Festival"},{"name":"Belgravia"}, {"name":"Осиное гнездо"}, {"name":"А потом тишина"}, {"name":"Чудо в камере номер 7"}, {"name":"Bloodride"}, {"name":"MR Robot"}, {"name":"Лед 2"}, {"name":"Double Je"}, {"name":"Проэкт Анна Николаевна"},{"name":"Коллцентр"}, {"name":"Шоу Миша портит все"}]
